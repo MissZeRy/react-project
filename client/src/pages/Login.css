@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-login {
+    /* background-image: url('../wallpapersden.jpg'); */
+    /* background: linear-gradient(-45deg, #6be905, #008cff); */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.body-login .form-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    background: #ffffff7c;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    height: 430px;
+}
+
+.form-box.incorrect .alert-incorrect {
+    display: flex;
+}
+
+.body-login .form-box h1 {
+    margin: 10px 0;
+    color: rgba(10, 18, 28, 255);
+    pointer-events: none;
+}
+
+.form-box form {
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.alert-incorrect {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: #e74c3c;
+    top: -10px;
+    padding: 10px;
+    width: 100%;
+    display: none;
+}
+
+.form-contorl {
+    position: relative;
+    border-bottom: 2px solid rgb(196, 196, 196);
+    margin: 40px 0;
+}
+
+.form-contorl input {
+    color: rgba(10, 18, 28, 255);
+    background: none;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 1em;
+    font-weight: 520;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-right: 25px;
+}
+
+.form-contorl label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: rgba(10, 18, 28, 255);
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+    transition: .2s;
+}
+
+
+.form-contorl span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(10, 18, 28, 255);
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.form-contorl input:focus~label,
+.form-contorl input:valid~label {
+    top: -5px;
+}
+
+.form-contorl input:focus~span::before,
+.form-contorl input:valid~span::before {
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.remember-forgot label input {
+    accent-color: rgba(10, 18, 28, 255);
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+
+    text-decoration: none;
+    color: rgba(10, 18, 28, 255);
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* .form_box .btn {
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: 1px 5px 5px #888888;
+}
+
+.form_box .btn:hover {
+    scale: 1.01;
+}
+
+.form_box .btn:active {
+    scale: 0.99;
+} */
+
+.btn-log {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2ecc71;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border-color: #2ecc71;
+    margin: 20px 0 20px;
+    box-shadow: 1px 5px 5px #888888
+}
+
+.btn-log:hover {
+    scale: 1.01;
+}
+
+.btn-log:active {
+    scale: 0.99;
+}
+
+.form-box .register {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-box .register a {
+    text-decoration: none;
+    color: rgba(10, 18, 28, 255);
+    margin-left: 10px;
+}
+
+.form-box .register a:hover {
+    text-decoration: underline;
+}
+
+.cricle-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #66CDAA;
+    clip-path: circle(500px at left 20px);
+}
+
+.cricle-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9370DB;
+    clip-path: circle(300px at right 800px);
+}
+
+.cricle-3 {
+    position: absolute;
+    left: 60%;
+    top: 50px;
+    width: 500px;
+    height: 500px;
+    background: rgb(255, 86, 86);
+    clip-path: circle(200px);
+}
+
+.cricle-4 {
+    position: absolute;
+    /* right: 1000px;
+    top: 400px; */
+    right: 60%;
+    top: 45%;
+    width: 500px;
+    height: 500px;
+    background: #ff8c00b0;
+    clip-path: circle(200px);
+}
+
+@media screen and (max-width:1280px) {
+    .cricle-1 {
+        clip-path: circle(400px at left 20px);
+    }
+    .cricle-2 {
+        clip-path: circle(200px at right 800px);
+    }
+    .cricle-3 {
+        clip-path: circle(150px);
+    }
+    .cricle-4 {
+        clip-path: circle(100px);
+    }
+}

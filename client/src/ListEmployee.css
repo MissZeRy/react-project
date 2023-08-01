@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: none;
+}
+
+
+.list-container {
+    margin: 30px auto;
+    width: 1200px;
+    height: 100%;
+    justify-content: center;
+}
+
+.btn-list-employee {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-list-employee .btn {
+    width: 200px;
+    height: 50px;
+    border: 1px solid;
+    background: rgba(10, 18, 28, 255);
+    margin-bottom: 20px;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border-color: rgba(10, 18, 28, 255);
+    margin: 10px;
+}
+
+.list-container h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px;
+}
+
+.header-list,
+.employee-list {
+    display: flex;
+}
+
+.header-title {
+    display: flex;
+    padding: 20px 0;
+    width: 20%;
+    font-weight: 700;
+    justify-content: center;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background: rgb(235, 235, 235);
+}
+
+/* .list-employee {
+    background: palegreen;
+} */
+
+.card-employee {
+    /* background: palegreen; */
+    display: flex;
+    width: 20%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #818181;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm,
+.cancel {
+  margin-left: 10px;
+}
+
+.btn-edit {
+  background: rgb(3, 100, 0);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: rgb(255, 51, 0);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+/* popup */
+.overlay-delete {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(43, 43, 43, 0.1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.delete-popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  display: none;
+}
+
+.delete-popup.open-popup {
+  display: flex;
+}
+
+.delete-popup .btn-delete-popup {
+  padding: 10px;
+  width: 200px;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.delete-popup .btn-delete-popup:hover {
+  scale: 1.01;
+}
+
+.delete-popup .btn-delete-popup:active {
+  scale: 0.99;
+}
+
+.delete-popup h3 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+}
+
+.delete-popup p {
+  font-size: 1rem;
+  margin: 0 0 30px;
+}
+
+.delete-popup .con-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
