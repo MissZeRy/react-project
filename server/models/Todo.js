@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const todoSchema = mongoose.Schema({
+    user: String,
     text: String,
     completed: Boolean,
     isEditing: Boolean

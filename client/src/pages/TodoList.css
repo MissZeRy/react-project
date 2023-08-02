@@ -9,7 +9,6 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    background: #41508D;
 }
 
 .todo-list {
@@ -17,11 +16,11 @@
     max-width: 640px;
     width: 100%;
     max-height: auto;
-    margin: 80px auto;
+    margin: 120px auto 0;
     padding: 40px;
     align-items: center;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000088;
+    border-radius: 20px;
     background: #EBEEFF;
 }
 

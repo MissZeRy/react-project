@@ -5,8 +5,6 @@
 }
 
 .body-login {
-    /* background-image: url('../wallpapersden.jpg'); */
-    /* background: linear-gradient(-45deg, #6be905, #008cff); */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -38,6 +36,7 @@
 .form-box.incorrect .alert-incorrect {
     display: flex;
 }
+
 
 .body-login .form-box h1 {
     margin: 10px 0;
@@ -144,20 +143,6 @@ form {
     text-decoration: underline;
 }
 
-/* .form_box .btn {
-    padding: 0;
-    margin: 20px 0;
-    width: 100%;
-    box-shadow: 1px 5px 5px #888888;
-}
-
-.form_box .btn:hover {
-    scale: 1.01;
-}
-
-.form_box .btn:active {
-    scale: 0.99;
-} */
 
 .btn-log {
     width: 100%;

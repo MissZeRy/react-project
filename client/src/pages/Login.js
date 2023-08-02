@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import axios from 'axios';
 
-function Login() {
+function Login({onLogin}) {
 
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
@@ -17,8 +17,9 @@ function Login() {
         }).then((response) => {
                 console.log("Login Succeed")
                 console.log(response.data.token);
-                sessionStorage.setItem('user', response.data.username)
-                navigate("/", { replace: true })
+                localStorage.setItem('userToken', response.data.username)
+                onLogin()
+                // navigate("/", { replace: true })
         }).catch((error) => {
             console.log("Login ",error)
             let formError = document.querySelector('.form-box')
