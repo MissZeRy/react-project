@@ -11,10 +11,16 @@ app.use(express.json());
 app.use(cors());
 
 // connect MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/todo-list', {
+// mongoose.connect('mongodb://127.0.0.1:27017/todo-list', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+
+mongoose.connect('mongodb+srv://admin:1234@cluster0.auijtni.mongodb.net/todo_list', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 
 app.use(Todo)
 app.use(User)

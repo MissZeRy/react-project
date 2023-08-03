@@ -15,8 +15,6 @@ function Login({onLogin}) {
             username: username,
             password: password
         }).then((response) => {
-                console.log("Login Succeed")
-                console.log(response.data.token);
                 localStorage.setItem('userToken', response.data.username)
                 onLogin()
                 // navigate("/", { replace: true })

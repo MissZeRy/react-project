@@ -45,7 +45,6 @@ function Register() {
 
         if (usernameValid && emailValid && passwordValid) {
             handleRegister(event)
-            console.log('Form submitted successfully!');
         }
     }
 
