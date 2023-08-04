@@ -17,7 +17,7 @@ function TodoList({ onLogout }) {
   }, []);
   
   const fetchTodosUser = async () => {
-    await axios.get(`http://localhost:3001/todos/${localStorage.getItem('userToken')}`).then((response) => {
+    await axios.get(`https://react-api-production.up.railway.app/todos/${localStorage.getItem('userToken')}`).then((response) => {
       setTodos(response.data);
     }).catch((error) => {
       console.log(error)
@@ -25,7 +25,7 @@ function TodoList({ onLogout }) {
   };
 
   const addTodo = async (todo) => {
-    await axios.post('http://localhost:3001/todos/create', {
+    await axios.post('https://react-api-production.up.railway.app/todos/create', {
       user: user,
       text: todo,
       completed: false,
@@ -45,7 +45,7 @@ function TodoList({ onLogout }) {
   }
 
   const UpdateTodo = async (task, id) => {
-    await axios.put(`http://localhost:3001/todos/update/${id}`, {
+    await axios.put(`https://react-api-production.up.railway.app/todos/update/${id}`, {
       text: task
     }).then((response) => {
       fetchTodosUser()
@@ -55,7 +55,7 @@ function TodoList({ onLogout }) {
   }
 
   const SuccessID = async (com, id) => {
-    await axios.put(`http://localhost:3001/todos/completed/${id}`, {
+    await axios.put(`https://react-api-production.up.railway.app/todos/completed/${id}`, {
       completed: !com
     }).then((response) => {
       fetchTodosUser()
@@ -65,7 +65,7 @@ function TodoList({ onLogout }) {
   }
 
   const DeleteId = async (id) => {
-    await axios.delete(`http://localhost:3001/todos/delete/${id}`).then((response) => {
+    await axios.delete(`https://react-api-production.up.railway.app/todos/delete/${id}`).then((response) => {
       setTodos(todos.filter((todo) => {
         return todo._id !== id
       }))

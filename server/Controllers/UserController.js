@@ -7,7 +7,7 @@ const Register = async (req, res) => {
 
     await User.findOne({ $or: [{ username: username }, { email: email }] }).then((response) => {
         if (response) {
-            return res.status(409).json();
+            return res.status(409).json(response);
         } else {
             const newUser = User.create({ username: username, password: password, email: email });
                 res.status(201).json();

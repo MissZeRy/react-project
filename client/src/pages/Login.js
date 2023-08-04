@@ -11,7 +11,7 @@ function Login({onLogin}) {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        await axios.post('http://localhost:3001/login', {
+        await axios.post('https://react-api-production.up.railway.app/login', {
             username: username,
             password: password
         }).then((response) => {
